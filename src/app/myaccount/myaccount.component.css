@@ -9,40 +9,73 @@
 }
 
 /* top header css */
-.header-main{
+
+.header-main {
     background-color: #fefefe;
 }
-.header-main .brand-logo{
+
+.header-main .brand-logo {
     width: 100px
 }
-.header-main .brand-logo img{
+
+.header-main .brand-logo img {
     width: 100%;
     height: auto;
 }
+
 .border-left {
-    border-left: 2px solid #fff !important;
+    border: 0px !important;
+    position: relative;
 }
 
-.rotate {
-    -webkit-transform: rotate(100deg);
+.border-left a::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 15px;
+    width: 100%;
+    bottom: 0;
+    border-left: 1px solid #fff;
+    top: 0;
+    left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 1px;
+}
+
+.rotate i {
     transform: rotate(100deg);
 }
 
 .drag ul li a {
     color: #fff;
     font-size: 1rem;
-    padding: 0 30px;
+    padding: 13px 30px;
 }
-.poi span{
+
+.drag ul li:hover {
+    background-color: #4ca115;
+}
+
+.active {
+    background-color: #4ca115;
+}
+
+.poi span {
     background-color: #ef1111;
     margin: 0 5px;
-    padding: 3px 2px;
+    padding: 2px 2px;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     text-align: center;
     display: inline-block;
-  }
+    font-size: 8px;
+    position: relative;
+    top: -13px;
+    left: -13px;
+}
+
 /* top header css ends here */
 
 .body-container{

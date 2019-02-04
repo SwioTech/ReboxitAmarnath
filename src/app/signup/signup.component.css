@@ -94,7 +94,7 @@ h1 {
 }
 
 .btn.btn-success {
-    background: #3c8a2e;
+    text-transform: capitalize;
 }
 
 .add {
@@ -111,3 +111,9 @@ h1 {
 input::placeholder{
     color: gray;
 }
+
+select {
+    color: gray;
+}
+
+button:focus {outline:0;}

@@ -41,7 +41,7 @@
             <a class="nav-link">Help</a>
           </li>
 
-          <li class="nav-item  poi">
+          <li class="nav-item  poi active">
               <a class="nav-link" routerLink="/cart"><i class="fas fa-shopping-cart"></i><span>{{cm}}</span></a>
             </li>
 
@@ -100,7 +100,7 @@
               <tr>
                 <th>Add a Picture</th>
                 <th>Category</th>
-                <th>Estimated<br /> Kg/Number</th>
+                <th>Estimated<br /> Quantity</th>
                 <th>Price</th>
                 <th></th>
 
@@ -138,7 +138,7 @@
 
         </div>
         <div class="text-center btn-btem">
-          <a routerLink="/collections">+ AddMore</a>
+          <a class="add-more" routerLink="/collections">+ AddMore</a>
         </div>
         <div class="text-center btn-btem">
           <button style="text-transform:capitalize" class="btn btn-success" (click)="proceedTocheck()">Confirm Pickup</button>  

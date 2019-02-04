@@ -59,7 +59,7 @@
           </div>
         </div>
         <!---Login Form starts here-->
-        <div class="">
+        <div class="login">
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-container">
             <div class="alert alert-danger" *ngIf="error">
               <strong>{{error}}</strong>
@@ -67,7 +67,7 @@
 
             <div class="form-group">
 
-              <input type="text" formControlName="email" class="form-control form-control-sm" placeholder="Email ID" />
+              <input style="margin-top:2em" type="text" formControlName="email" class="form-control form-control-sm" placeholder="Email ID" />
             </div>
 
             <div *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched" class="alert alert-danger">
@@ -95,7 +95,7 @@
 
 
             <div class="text-center">
-              <button type="submit" class="btn btn-success btn-sm btn-block">
+              <button style="text-transform:capitalize" type="submit" class="btn btn-success btn-sm btn-block">
                 Login
               </button>
 

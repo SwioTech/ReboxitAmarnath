@@ -186,18 +186,18 @@ h4::after{
     padding: 1.25rem;
   }
   .btn-success{
-    background-color: #3d882f;
-    border-color: #3d882f;
     border-radius: 0;
     padding: 6px 15px;
     margin: 0 15px;
+    font-size: 1em;
   }
 
   .add-more{
     border: none;
     background-color: transparent;
     font-weight: 700;
-    margin: 10px 20px;
+    margin: 0px 20px;
+    font-size: 1.1em;
   }
 
  .row-width {

@@ -102,7 +102,7 @@ h1 {
     text-decoration: none;
     color: #000;
     font-size: 0.8rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .btm-txt {
@@ -125,3 +125,6 @@ h1 {
 input::placeholder{
     color: gray;
 }
+
+
+.btn:focus {outline:0;}

@@ -157,6 +157,14 @@ h4::after {
     margin: 30px auto;
 }
 
+.add-more{
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    margin: 0px 20px;
+    font-size: 1.1em;
+  }
+
 .btn-btem a {
     color: #000;
     margin-left: 1.3rem;

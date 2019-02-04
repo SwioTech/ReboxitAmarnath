@@ -1,7 +1,7 @@
 
 
 .active a {
-    text-decoration: underline;
+
 }
 
 .bg1 {
@@ -125,7 +125,7 @@
 }
 
 .cbr {
-    border: 5px solid #005f33;
+
 }
 
 /* top header css */
@@ -256,7 +256,7 @@ h3 {
 
 .box-container {
     background: #fff;
-    border: 1px solid #3c8a2e;
+    padding: 1em;
     min-height: 800px;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
@@ -284,11 +284,12 @@ h3 {
     line-height: 16px;
 }
 .thumbnail .cpt-head{
-    font-size: 0.9rem;
+    font-size: 0.8em;
+    font-weight: bold;
 }
 .thumbnail .cpt-sm{
     display: block;
-    font-size: 0.6rem;
+    font-size: 0.6em;
 }
 /*
 .content-des-txt:hover{
