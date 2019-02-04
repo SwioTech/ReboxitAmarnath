@@ -47,6 +47,11 @@ import { AdminaggrereqrecComponent } from './adminaggrereqrec/adminaggrereqrec.c
 import { AdminrecComponent } from './adminrec/adminrec.component';
 import { AddlocationComponent } from './addlocation/addlocation.component';
 import { SignupadminComponent } from './signupadmin/signupadmin.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
+// routing starts here
+
 const routes  : Routes =[
   {path: '' , redirectTo:'landing' ,pathMatch:'full'},
   {path : 'landing' ,component:LandingComponent},
@@ -115,6 +120,8 @@ const routes  : Routes =[
     AdminrecComponent,
     AddlocationComponent,
     SignupadminComponent,
+    FooterComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

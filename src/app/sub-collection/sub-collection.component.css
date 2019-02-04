@@ -185,12 +185,12 @@ h4::after{
     border-radius: 0;
     padding: 1.25rem;
   }
-  .btn-success{
+  /* .btn-success{
     border-radius: 0;
     padding: 6px 15px;
     margin: 0 15px;
     font-size: 1em;
-  }
+  } */
 
   .add-more{
     border: none;
@@ -245,4 +245,5 @@ h4::after{
 
 .btm-buttons{
   margin:  25px auto;
+  
 }
