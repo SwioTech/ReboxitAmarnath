@@ -18,6 +18,7 @@ export class PickupComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.authService.isLoggedIn());
     this.pickupForm = this.formBuilder.group({
       location: ['0', Validators.required],
       address: ['', Validators.required],

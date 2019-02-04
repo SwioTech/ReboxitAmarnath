@@ -50,14 +50,6 @@ export class DesignComponent implements OnInit {
               this.router.navigate(['/pickup']);
             }
 
-
-
-
-
-
-
-
-
     }
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -114,7 +106,8 @@ export class DesignComponent implements OnInit {
             {
               console.log("dint match");
               localStorage.setItem("user",JSON.stringify(resi2));
-              this.router.navigate(['/pickup']);
+              location.reload();
+              // this.router.navigate(['/pickup']);
             }
           });
         })

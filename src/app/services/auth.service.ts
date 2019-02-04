@@ -51,6 +51,7 @@ export class AuthService {
     .then((res) => {
       console.log("signed out successfully");
       localStorage.removeItem("user");
+      location.reload();
       this.router.navigate(["/design"]);
     });
   }

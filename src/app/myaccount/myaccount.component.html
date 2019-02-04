@@ -1,63 +1,4 @@
 <div class="">
-  <div class="header-main">
-    <div class="container">
-      <div class="brand-logo">
-        <a routerLink="/landing"> <img src="../assets/images/Categories/logo.png"></a>
-      </div>
-    </div>
-  </div>
-  <!-----Navigation Starts Here-------------------->
-  <app-navbar></app-navbar>
-
-  <!-- <nav class="navbar navbar-expand-sm navbar-light bg1">
-    <div class="container">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse  drag" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto ">
-          <li class="nav-item poi">
-            <a class="nav-link" routerLink="/design">Price List </a>
-          </li>
-          <li class="nav-item poi">
-            <a class="nav-link" routerLink="/design">Book a Pickup</a>
-          </li>
-          <li class="nav-item poi">
-            <a class="nav-link" routerLink="/associate">Associates</a>
-          </li>
-          <li class="nav-item poi active">
-            <a class="nav-link" routerLink="/design"> My Account</a>
-          </li>
-
-          <li class="nav-item poi">
-            <a class="nav-link" (click)="logout()"> Logout</a>
-          </li>
-
-          <li class="nav-item poi">
-            <a class="nav-link">Help</a>
-          </li>
-
-          <li class="nav-item  poi">
-            <a class="nav-link" routerLink="/cart"><i class="fas fa-shopping-cart"></i><span>{{cm}}</span></a>
-          </li>
-
-
-          <li class="nav-item poi border-left">
-            <a class="nav-link rotate"><i class="fa fa-phone"></i></a>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </nav> -->
-
-
-
-  <!--------My account starts-->
-
 
   <div class="body-container">
     <div class="container-fluid">
@@ -67,18 +8,23 @@
 
           <ul class="personal-info">
             <li>
-              <label>Name:</label>
-              Pranavi
+              <label><strong>Name:</strong></label>
+              {{UserDetails.username}}
             </li>
 
             <li>
-              <label>Address:</label>
+              <label><strong>Address:</strong></label>
               1-5-286/2/4/55
             </li>
 
             <li>
-              <label>Phone No:</label>
-              +91 -9705996615
+              <label style="width:110px"><strong>Type Of User:</strong></label>
+                {{UserDetails.usertype.replace("_", " ")}}
+            </li>
+
+            <li>
+              <label><strong>Phone No:</strong></label>
+              +91-{{UserDetails.phone}}
             </li>
 
 
@@ -88,8 +34,7 @@
 
         </div>
         <div class="col-md-6" id="accordion-style-1">
-
-          <h4 _ngcontent-c1="" class="text-center text-capitalize">Present Order</h4>
+          <h3 style="text-align:center">Present Order</h3>
 
           <section>
             <div class="row">
@@ -102,8 +47,8 @@
                       <div class="collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false"
                         aria-controls="collapse1">
                         <label class="bordered">Slot: 02-12-2019</label>
-                        <label class="bordered">Quantity: 9Kg</label>
-                        <label>Price: Rs 45/-</label>
+                        <label class="bordered">Quantity: {{TotalQuantity}}Kg</label>
+                        <label>Price: Rs {{10 * TotalQuantity}}/-</label>
                         <label class="last">View</label>
                       </div>
                     </div>
@@ -114,19 +59,19 @@
                           <div class="col-md-9">
                             <div class="table-responsive">
                               <table class="table borderless">
-                                <thead>
+                                <!-- <thead>
                                   <th>
                                     <h5>Paper</h5>
                                   </th>
-                                </thead>
+                                </thead> -->
 
                                 <tbody>
-                                  <tr>
-                                    <td>Bottle</td>
-                                    <td>5</td>
-                                    <td>35.00</td>
+                                  <tr *ngFor="let item of cart">
+                                    <td>{{item.Name}}</td>
+                                    <td>{{item.Quantity}}</td>
+                                    <td>Rs {{item.Price * item.Quantity}}.00/-</td>
                                   </tr>
-                                  <tr>
+                                  <!-- <tr>
                                     <td>Copper</td>
                                     <td>10</td>
                                     <td>25.00</td>
@@ -145,7 +90,7 @@
                                     <td>News Papers</td>
                                     <td>7</td>
                                     <td>56.00</td>
-                                  </tr>
+                                  </tr> -->
                                 </tbody>
                               </table>
                             </div>
@@ -161,7 +106,7 @@
                       </div>
                     </div>
                   </div>
-
+<!-- 
                   <div class="card">
                     <div class="card-header" id="headingOne">
                       <div class="collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false"
@@ -225,8 +170,8 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-
+                  </div> -->
+<!-- 
 
                   <div class="card">
                     <div class="card-header" id="headingOne">
@@ -291,7 +236,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
 
 
@@ -303,9 +248,9 @@
 
 
 
-          <h4 _ngcontent-c1="" class="text-center text-capitalize">Previous Order</h4>
+          <h3 _ngcontent-c1="" class="text-center text-capitalize">Previous Orders</h3>
 
-          <section>
+          <!-- <section>
             <div class="row">
 
               <div class="col-md-12 mx-auto">
@@ -322,7 +267,7 @@
                       </div>
                     </div>
 
-                    <div id="previouscollapse1" class="collapse  fade" aria-labelledby="headingOne" data-parent="#accordionPrevious">
+                     <div id="previouscollapse1" class="collapse  fade" aria-labelledby="headingOne" data-parent="#accordionPrevious">
                       <div class="card-body">
                         <div class="row">
                           <div class="col-md-9">
@@ -506,21 +451,17 @@
                       </div>
                     </div>
                   </div>
-
-
-
-
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
           <!--sectin ends here-->
-
+          <h4 style="text-align:center; margin-top: 2em">No Previous Orders</h4>
         </div>
         <!--Right section starts here-->
         <div class="col-md-3 sec text-center">
           <h5>Trees Saved</h5>
-          <p class="count">501</p>
+          <!-- <p class="count">501</p> -->
           <span class="tree-img"></span>
           <span class="tree-img"></span>
           <span class="tree-img"></span>
@@ -530,8 +471,5 @@
       </div>
     </div>
   </div>
-
-
-
 
 </div>

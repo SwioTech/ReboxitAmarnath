@@ -2,6 +2,21 @@
     background: #3c8a2e;
 }
 
+
+.header-main {
+    background-color: #fefefe;
+}
+
+.header-main .brand-logo {
+    width: 100px
+}
+
+.header-main .brand-logo img {
+    width: 100%;
+    height: auto;
+}
+
+
 .poi {
     cursor: pointer;
 }
